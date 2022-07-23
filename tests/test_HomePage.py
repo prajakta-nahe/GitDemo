@@ -23,7 +23,7 @@ class TestHomePage(BaseClass):
         alertText = homepage.getSuccessMessage().text      # alertText = driver.find_element(By.CSS_SELECTOR,"[class='alert-success']").text
         assert ("Success" in alertText)
         self.driver.refresh()                               # so as to refresh the browser before passing next data sets
-
+        print(alertText)
 
         # @pytest.fixture(params=[("Prajakta","abc@gmail.com","Female"), ("Pranav","xyz@gmail.com","Male")]) ---> passing tuple index
         #@pytest.fixture(params = HomePageData.test_HomePage_data)      # Calling the data by it's class name
